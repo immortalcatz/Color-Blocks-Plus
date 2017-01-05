@@ -22,30 +22,28 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 
+public class CbColorBlock extends Block {
 
-public class CbColorBlock extends Block
-{
+    private int R;
+    private int G;
+    private int B;
+    private int LV;
 
-	private int R;
-	private int G;
-	private int B;
-	private int LV;
-
-	public CbColorBlock(String string, CreativeTabs creative, int r, int g, int b, int lv){
-		super(Material.wood);
-		R = r;
-		G = g;
-		B = b;
-		LV = lv;
-		this.setLightLevel(1F);
-	//	CLApi.setBlockColorRGB(this, R, G, B, LV);
-		this.setCreativeTab(creative);
-		this.setResistance(50F);
-		this.setHardness(0.1F);
-		this.setStepSound(Block.soundTypeStone);
-		this.setBlockName("Cb" + string);
-		this.setBlockTextureName(ColorBlocks.modid + ":" + string);
-		}
+    public CbColorBlock(String string, CreativeTabs creative, int r, int g, int b, int lv) {
+        super(Material.wood);
+        R = r;
+        G = g;
+        B = b;
+        LV = lv;
+        this.setLightLevel(1F);
+        //	CLApi.setBlockColorRGB(this, R, G, B, LV);
+        this.setCreativeTab(creative);
+        this.setResistance(50F);
+        this.setHardness(0.1F);
+        this.setStepSound(Block.soundTypeStone);
+        this.setBlockName("Cb" + string);
+        this.setBlockTextureName(ColorBlocks.modid + ":" + string);
+    }
 
 }
 
