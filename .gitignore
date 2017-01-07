@@ -13,4 +13,15 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 
+CREDITS-fml.txt
+LICENSE-fml.txt
+MinecraftForge-Credits.txt
+MinecraftForge-License.txt
+README.txt
+build.gradle
+eclipse/
+forge-*-changelog.txt
+gradle/
+gradlew
+gradlew.bat
 src/
