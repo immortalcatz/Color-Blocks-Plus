@@ -1,0 +1,8 @@
+itemGroup.___modClass___Tab=___modName___
+
+
+tile.___modClass______colorId___.name=___colorName___
+
+tile.___modClass______colorId___Slab.name=___colorName___ Slab
+
+tile.___modClass______colorId___Stair.name=___colorName___ Stair
