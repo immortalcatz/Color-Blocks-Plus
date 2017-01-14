@@ -21,9 +21,8 @@ Color Blocks 2と比較した場合のメリットとして、以下の点が挙
 
 - マルチプレイ対応
 - [MinePainter](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1288124-0-2-6-mine-painter-simple-sculpture-and-pixel-art)対応
-- [Carpenter's Blocks](http://www.carpentersblocks.com)対応
 
-また、2同様[BuildCraft](http://www.mod-buildcraft.com)の外装板にも使用可能です。  
+また、2同様[BuildCraft](http://www.mod-buildcraft.com)の外装板や[Carpenter's Blocks](http://www.carpentersblocks.com)にも使用可能です。  
 
 
 ## Support
