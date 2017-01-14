@@ -89,11 +89,6 @@ public class ___modClass___ {
     }
 
     @EventHandler
-    public void load(FMLInitializationEvent event) {
-        proxy.registerRenderers();
-    }
-
-    @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
     }
 }
