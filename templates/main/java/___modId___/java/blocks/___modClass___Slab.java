@@ -27,7 +27,7 @@ public class ___modClass___Slab extends BlockSlab {
         this.colorId = block.getUnlocalizedName().replaceAll(".*___modClass___", "");
         this.setBlockName("___modClass___" + this.colorId + "Slab");
         this.setBlockTextureName(Color.modid + ":" + this.colorId);
-        if(!fullBlock) this.setCreativeTab(___modClass___.___modClass___Tab);
+        if(!fullBlock) this.setCreativeTab(___modClass___.___modClass___SlabsTab);
         this.setResistance(___blockResistance___);
         this.setHardness(___blockHardness___);
         this.setStepSound(___blockStepSound___);

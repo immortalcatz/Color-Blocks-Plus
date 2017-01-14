@@ -1,4 +1,6 @@
-itemGroup.___modClass___Tab=___modName___
+itemGroup.___modClass___BlocksTab=___modName___ - Blocks
+itemGroup.___modClass___StairsTab=___modName___ - Stairs
+itemGroup.___modClass___SlabsTab=___modName___ - Slabs
 
 
 tile.___modClass______colorId___.name=___colorName___

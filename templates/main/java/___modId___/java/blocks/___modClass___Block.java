@@ -27,7 +27,7 @@ public class ___modClass___Block extends Block {
         super(___blockMaterial___);
         this.setBlockName("___modClass___" + colorId);
         this.setBlockTextureName(___modClass___.modid + ":" + colorId);
-        this.setCreativeTab(___modClass___.___modClass___Tab);
+        this.setCreativeTab(___modClass___.___modClass___BlocksTab);
         this.setResistance(___blockResistance___);
         this.setHardness(___blockHardness___);
         this.setStepSound(___blockStepSound___);

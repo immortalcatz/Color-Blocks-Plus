@@ -18,9 +18,9 @@ public class ___modClass___Stair extends BlockStairs {
         super(block, 1);
         this.colorId = block.getUnlocalizedName().replaceAll(".*___modClass___", "");
         this.setBlockName("___modClass___"  + this.colorId + "Stair");
+        this.setCreativeTab(___modClass___.___modClass___StairsTab);
         this.setResistance(___blockResistance___);
         this.setHardness(___blockHardness___);
         this.setStepSound(___blockStepSound___);
-        this.setCreativeTab(___modClass___.___modClass___Tab);
     }
 }

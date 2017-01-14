@@ -68,9 +68,19 @@ public class ___modClass___ {
     public static BlockSlab   ___modClass______colorId___FullSlab;
 
     // Creative tab
-    public static final CreativeTabs ___modClass___Tab = new CreativeTabs("___modClass___Tab") {
+    public static final CreativeTabs ___modClass___BlocksTab = new CreativeTabs("___modClass___BlocksTab") {
         public Item getTabIconItem() {
             return Item.getItemFromBlock(___modClass______modIcon___);
+        }
+    };
+    public static final CreativeTabs ___modClass___StairsTab = new CreativeTabs("___modClass___StairsTab") {
+        public Item getTabIconItem() {
+            return Item.getItemFromBlock(___modClass______modIcon___Stair);
+        }
+    };
+    public static final CreativeTabs ___modClass___SlabsTab = new CreativeTabs("___modClass___SlabsTab") {
+        public Item getTabIconItem() {
+            return Item.getItemFromBlock(___modClass______modIcon___HalfSlab);
         }
     };
 
