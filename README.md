@@ -55,7 +55,7 @@ Forgeの仕様(?)のようなので、おそらくMod側では対策不能です
 
 インストール→ブロック設置→アンインストール→再度ワールドを開いてMissing BlocksでYes→再度インストール→ワールド修復処理でYes、の手順を行うことで正しくグラデーション状に並ぶ場合があります。(バックアップを取った上で、自己責任で行ってください)
 
-\***Do at your own risk.*\**  
+\*\**Do at your own risk.*\*\*  
 ![missing blocks](resources/images/missing-blocks.jpg)  
 ![repair world](resources/images/repair-world.jpg)  
 ![sorted](resources/images/screenshot.png)
