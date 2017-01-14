@@ -1,6 +1,6 @@
 mod:
     name:                     Color Blocks Plus
-    class:          &modClass ColorBlocksPlus
+    class:                    ColorBlocksPlus
     id:                       colorblocksplus
     icon:                     Black
     version:                  1.0
@@ -23,7 +23,7 @@ block:
     resistance: 50F
     hardness:   0.1F
     stepSound:  Block.soundTypeStone
-    info:       *modClass    # addInformation() return "___blockInfo___ ___colorCode___"
+    info:       Color Blocks Plus -    # addInformation() return "___blockInfo___ ___colorCode___"
 templates:
     base_dir:   templates
     export_dir: src
