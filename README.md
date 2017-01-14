@@ -33,6 +33,11 @@ Color Blocks 2と比較した場合のメリットとして、以下の点が挙
 - No Recipe, **CREATIVE MODE ONLY!** (クリエイティブモード専用)
 
 
+## Download
+
+<https://github.com/Isthmis/Color-Blocks-Plus/raw/master/resources/jar/Color%20Blocks%20Plus%20-%201.0.jar>
+
+
 ## Usage
 
 ### Install
