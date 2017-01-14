@@ -66,7 +66,7 @@ templates  = list_all_files(base_dir, show_root_dir=False)
 # Check Command-Line Options
 if 1 < len(sys.argv):
     if config['mod']['jar_dir'] and ('-p' in sys.argv or '--production' in sys.argv):
-        mod_file = '{0}/{1} - {2}.jar'.format(config['mod']['jar_dir'], config['mod']['name'], config['mod']['version'])
+        mod_file = '{0}{1} - {2}.jar'.format(add_directory_lastsep(config['mod']['jar_dir']), config['mod']['name'], config['mod']['version'])
         if not os.path.isdir(config['mod']['jar_dir']):
             os.makedirs(config['mod']['jar_dir'])
         print('')

@@ -17,7 +17,7 @@ mod:
     dependencies:             [Forge]
     dependants:               []
     useDependencyInformation: true
-    jar_dir:                  resources/jar
+    jar_dir:                  resources/jar/
 block:
     material:   Material.rock
     resistance: 50F
