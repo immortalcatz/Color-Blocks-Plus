@@ -13,8 +13,8 @@
 以下のブロックが追加されます。
 
 - 全340色のブロック
-- 全340色のハーフブロック
 - 全340色の階段
+- 全340色のハーフブロック
 
 [Minecraft Colorize Blocks Generator](https://github.com/Isthmis/Minecraft-Colorize-Blocks-Generator) (Pythonスクリプトです。CC0ライセンスで公開しています) によってJavaファイルを自動生成しています。  
 Color Blocks 2と比較した場合のメリットとして、以下の点が挙げられます。
