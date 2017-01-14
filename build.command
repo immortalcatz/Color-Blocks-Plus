@@ -6,13 +6,13 @@ source ./bash_util
 
 
 function build() {
-    ./generator.py && ./gradlew build
+    ./generator.py && ./gradlew build && ./generator.py --production
 }
 
 
 
 while true; do
     build
-    *echo '* REGENERATE & REBUILD [PRESS ENTER] *'
+    *echo '* REBUILD [PRESS ENTER] *'
     read INPUT
 done

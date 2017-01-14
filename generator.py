@@ -4,6 +4,7 @@
     Minecraft Colorize Blocks Generator
 '''
 
+import sys
 import os
 import shutil
 import re
@@ -16,7 +17,7 @@ import json
 config_file = 'config.yaml'
 
 exclude_dir  = re.compile(r'{0}(\..+|[e|E]xclude){0}'.format(os.path.sep))    # .hidden_dir/ or exclude/
-exclude_file = re.compile(r'\.exclude(\.|$)'.format(os.path.sep))    # *.exclude.* or *.exclude File
+exclude_file = re.compile(r'\.exclude(\.|$)')    # *.exclude.* or *.exclude File
 
 def add_directory_lastsep(directory):
     return (directory + os.path.sep) if (re.search(os.path.sep + '$', directory) is None) else directory
@@ -59,6 +60,25 @@ colors     = config['colors']
 base_dir   = '.' + os.path.sep + add_directory_lastsep(config['templates']['base_dir'])
 export_dir = '.' + os.path.sep + add_directory_lastsep(config['templates']['export_dir'])
 templates  = list_all_files(base_dir, show_root_dir=False)
+
+
+
+# Check Command-Line Options
+if 1 < len(sys.argv):
+    if config['mod']['jar_dir'] and ('-p' in sys.argv or '--production' in sys.argv):
+        mod_file = '{0}/{1} - {2}.jar'.format(config['mod']['jar_dir'], config['mod']['name'], config['mod']['version'])
+        if not os.path.isdir(config['mod']['jar_dir']):
+            os.makedirs(config['mod']['jar_dir'])
+        print('')
+        print('')
+        print('Preparing .jar file…')
+        shutil.copyfile('build/libs/modid-1.0.jar', mod_file)
+        print('')
+        print('Mod file: {0}'.format(mod_file))
+        print('')
+    else:
+        print('Usage: {0} [-p/--production]'.format(sys.argv[0]))
+    sys.exit()
 
 
 
