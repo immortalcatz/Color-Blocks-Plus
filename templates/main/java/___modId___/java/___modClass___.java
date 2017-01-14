@@ -60,12 +60,12 @@ public class ___modClass___ {
 
     // Blocks
     public static Block       ___modClass______colorId___;
-    // Slabs
+    // Stairs
+    public static BlockStairs ___modClass______colorId___Stair;
+    // Half Slabs
     public static BlockSlab   ___modClass______colorId___HalfSlab;
     // Full Slabs
     public static BlockSlab   ___modClass______colorId___FullSlab;
-    // Stairs
-    public static BlockStairs ___modClass______colorId___Stair;
 
     // Creative tab
     public static final CreativeTabs ___modClass___Tab = new CreativeTabs("___modClass___Tab") {
@@ -78,12 +78,12 @@ public class ___modClass___ {
     public void preInit(FMLPreInitializationEvent event) {
         // Defines the Blocks in Minecraft
         ___modClass______colorId___         = new ___modClass___Block("___colorId___");
+        // Defines the Stairs in Minecraft
+        ___modClass______colorId___Stair    = new ___modClass___Stair(___modClass______colorId___);
         // Defines the Half Slabs in Minecraft
         ___modClass______colorId___HalfSlab = new ___modClass___Slab(___modClass______colorId___, false);
         // Defines the Full Slabs in Minecraft
         ___modClass______colorId___FullSlab = new ___modClass___Slab(___modClass______colorId___, true);
-        // Defines the Stairs in Minecraft
-        ___modClass______colorId___Stair    = new ___modClass___Stair(___modClass______colorId___);
 
         ColorRegistrations.addRegistrations(this);
     }

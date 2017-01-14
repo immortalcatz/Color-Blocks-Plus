@@ -15,11 +15,11 @@ public class ColorRegistrations {
 
         // Registers the Blocks in Minecraft
         GameRegistry.registerBlock(m.___modClass______colorId___,         ___modClass___BlockItem.class, "___colorId___");
+        // Registers the Stairs in Minecraft
+        GameRegistry.registerBlock(m.___modClass______colorId___Stair,    ___modClass___BlockItem.class, "___colorId___Stair");
         // Registers the Half Slabs in Minecraft
         GameRegistry.registerBlock(m.___modClass______colorId___HalfSlab, ___modClass______colorId___SlabItem.class,  "___colorId___HalfSlab");
         // Registers the Full Slabs in Minecraft
         GameRegistry.registerBlock(m.___modClass______colorId___FullSlab, ___modClass______colorId___SlabItem.class,  "___colorId___FullSlab");
-        // Registers the Stairs in Minecraft
-        GameRegistry.registerBlock(m.___modClass______colorId___Stair,    ___modClass___BlockItem.class, "___colorId___Stair");
     }
 }
