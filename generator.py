@@ -16,11 +16,14 @@ import json
 
 config_file = 'config.yaml'
 
-exclude_dir  = re.compile(r'{0}(\..+|[e|E]xclude){0}'.format(os.path.sep))    # .hidden_dir/ or exclude/
+exclude_dir  = re.compile(r'{0}(\..+|[e|E]xcludes?){0}'.format(os.path.sep))    # .hidden_dir/ or excludes/
 exclude_file = re.compile(r'\.exclude(\.|$)')    # *.exclude.* or *.exclude File
 
 def add_directory_lastsep(directory):
-    return (directory + os.path.sep) if (re.search(os.path.sep + '$', directory) is None) else directory
+    if directory:
+        return (directory + os.path.sep) if (re.search(os.path.sep + '$', directory) is None) else directory
+    else:
+        return ''
 def list_all_files(directory, show_root_dir=True, show_hidden_files=False):
     directory = add_directory_lastsep(directory)
     for root, dirs, files in os.walk(directory):
@@ -54,31 +57,39 @@ def replace_tag(data, color=None):
 
 with open(config_file) as f:
     config = yaml.load(f)
-if config['block']['info']:
-    config['block']['info'] += ' '
+if config['block']['info']: config['block']['info'] += ' '
+config['mod']['packageName'] = ''.join(map(str, config['mod']['packageName'])) if config['mod']['packageName'] else ''
 colors     = config['colors']
-base_dir   = '.' + os.path.sep + add_directory_lastsep(config['templates']['base_dir'])
-export_dir = '.' + os.path.sep + add_directory_lastsep(config['templates']['export_dir'])
+base_dir   = '.' + os.path.sep + add_directory_lastsep(config['templates']['baseDir'])
+export_dir = '.' + os.path.sep + add_directory_lastsep(config['templates']['exportDir'])
 templates  = list_all_files(base_dir, show_root_dir=False)
 
 
 
 # Check Command-Line Options
 if 1 < len(sys.argv):
-    if config['mod']['jar_dir'] and ('-p' in sys.argv or '--production' in sys.argv):
-        mod_file = '{0}{1} - {2}.jar'.format(add_directory_lastsep(config['mod']['jar_dir']), config['mod']['name'], config['mod']['version'])
-        if not os.path.isdir(config['mod']['jar_dir']):
-            os.makedirs(config['mod']['jar_dir'])
-        print('')
-        print('')
-        print('Preparing .jar file…')
-        shutil.copyfile('build/libs/modid-1.0.jar', mod_file)
-        print('')
-        print('Mod file: {0}'.format(mod_file))
-        print('')
+    if '-p' in sys.argv or '--packaging' in sys.argv:
+        if config['mod']['packageName']:
+            print('')
+            print('Preparing .jar file…')
+            package_file = '{0}{1}.jar'.format(add_directory_lastsep(config['mod']['packageDir']), config['mod']['packageName'])
+            if config['mod']['packageDir'] and not os.path.isdir(config['mod']['packageDir']):
+                os.makedirs(config['mod']['packageDir'])
+            shutil.copyfile('build/libs/modid-1.0.jar', package_file)
+            print('')
+            print('PACKAGING SUCCESSFUL')
+            print('')
+            print('Mod package file: {0}'.format(package_file))
+            print('')
     else:
-        print('Usage: {0} [-p/--production]'.format(sys.argv[0]))
+        print('Usage: {0} [-p/--packaging]'.format(sys.argv[0]))
     sys.exit()
+
+
+
+print('')
+print('Generating blocks…')
+print('')
 
 
 

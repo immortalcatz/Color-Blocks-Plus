@@ -1,9 +1,9 @@
 mod:
-    name:                     Color Blocks Plus
+    name:            &modName Color Blocks Plus
     class:                    ColorBlocksPlus
     id:                       colorblocksplus
     icon:                     Black
-    version:                  1.0
+    version:      &modVersion 1.0
     mcversion:                1.7.10
     description:
     url:                      https://github.com/Isthmis/Color-Blocks-Plus
@@ -17,7 +17,8 @@ mod:
     dependencies:             [Forge]
     dependants:               []
     useDependencyInformation: true
-    jar_dir:                  resources/jar/
+    packageDir:               resources/package/    # Output .jar Directory
+    packageName:              [*modName, ' - ', *modVersion]    # Package File Name: ___modPackageName___.jar
 block:
     material:   Material.rock
     resistance: 50F
@@ -25,8 +26,8 @@ block:
     stepSound:  Block.soundTypeStone
     info:       Color Blocks Plus -    # addInformation() return "___blockInfo___ ___colorCode___"
 templates:
-    base_dir:   templates
-    export_dir: src
+    baseDir:   templates
+    exportDir: src
 colors:
     -
         code: '#000000'

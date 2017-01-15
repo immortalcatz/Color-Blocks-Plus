@@ -5,14 +5,8 @@ source ./bash_util
 
 
 
-function build() {
-    ./generator.py && ./gradlew build && ./generator.py --production
-}
-
-
-
 while true; do
-    build
+    ./generator.py && newline && echo 'Building codes…' && newline && ./gradlew build && newline && ./generator.py --packaging
     *echo '* REBUILD [PRESS ENTER] *'
     read INPUT
 done

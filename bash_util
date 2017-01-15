@@ -3,7 +3,15 @@
 
 
 function newline() {
-    echo ''
+    [ "$1" ] && local length="$1" || local length=1
+    for (( i = 0; i < length; i++ )); do
+        # CPU Power Saving
+        if [ 100 -le "$i" ]; then
+            break
+        fi
+
+        echo ''
+    done
 }
 
 function *() {
