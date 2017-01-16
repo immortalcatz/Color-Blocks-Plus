@@ -24,7 +24,7 @@ block:
     resistance: 50F
     hardness:   0.1F
     stepSound:  Block.soundTypeStone
-    info:       Color Blocks Plus -    # addInformation() return "___blockInfo___ ___colorCode___"
+    info:       [*modName, ' -']    # addInformation() return "___blockInfo___ ___colorCode___"
 templates:
     baseDir:   templates
     exportDir: src

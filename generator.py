@@ -57,8 +57,8 @@ def replace_tag(data, color=None):
 
 with open(config_file) as f:
     config = yaml.load(f)
-if config['block']['info']: config['block']['info'] += ' '
 config['mod']['packageName'] = ''.join(map(str, config['mod']['packageName'])) if config['mod']['packageName'] else ''
+config['block']['info'] = ''.join(map(str, config['block']['info'])) + ' ' if config['block']['info'] else ''
 colors     = config['colors']
 base_dir   = '.' + os.path.sep + add_directory_lastsep(config['templates']['baseDir'])
 export_dir = '.' + os.path.sep + add_directory_lastsep(config['templates']['exportDir'])
